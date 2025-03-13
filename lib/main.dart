@@ -4,6 +4,7 @@ import 'chapter3/botton.dart';
 import 'chapter3/image_icon.dart';
 import 'chapter3/switch_checkbox.dart';
 import 'chapter3/text.dart';
+import 'chapter3/textfield.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         "button":(context)=>BottonRoute(),
         "image_icon":(context)=>ImageAndIconRoute(),
         "switch_checkbox":(context)=>SwitchAndCheckBoxRoute(),
+        "textfield":(context)=>TextFieldRoute(),
       },
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -71,6 +73,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.pushNamed(context, "switch_checkbox");
               }, 
               child: Text("switch_checkbox")
+            ),
+            TextButton(
+              onPressed: (){
+                Navigator.pushNamed(context, "textfield");
+              }, 
+              child: Text("textfield")
             ),
           ],
         ),
